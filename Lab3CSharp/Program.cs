@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 
 namespace Lab3CSharp
 {
@@ -7,6 +8,7 @@ namespace Lab3CSharp
         static void Main(string[] args)
         {
             Console.WriteLine("         Lab 3 ");
+
             Console.WriteLine("         Task 1 ");
             Trapeze[] trapezes = new Trapeze[]
                 {
@@ -56,6 +58,35 @@ namespace Lab3CSharp
             Console.WriteLine("Perimetr: " + trapeze.CalculatePerimeter());
             Console.WriteLine("Area: " + trapeze.CalculateArea());
             Console.WriteLine("Square: " + trapeze.IsSquare());
+            Console.WriteLine();
+
+
+
+            Console.WriteLine("         Task 2 ");
+            List<Person> people = new List<Person>()
+            {
+                new Person("Petro", 45),
+                new Employee("Ivan", 25,"aaa", 700),
+                new Worker("Taras", 32,"aaa", 1700,"bbb"),
+                new Engineer("Roma", 22,"aaa", 900,"bbb","ccc") 
+            };
+
+
+            Console.WriteLine("Before sorting by Age:");
+            foreach (var person in people) 
+            {
+                person.Show();
+                Console.WriteLine();
+            }
+            Console.WriteLine();
+
+            List<Person> sortedPeople = people.OrderBy(p => p.Age).ToList();
+            Console.WriteLine("\nAfter sorting by Age:");
+            foreach (var person in sortedPeople)
+            {
+                person.Show();
+                Console.WriteLine();
+            }
             Console.WriteLine();
         }
     }
