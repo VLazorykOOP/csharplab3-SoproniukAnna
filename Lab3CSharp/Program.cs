@@ -27,20 +27,30 @@ namespace Lab3CSharp
                 Console.WriteLine();
             }
 
+            Console.WriteLine("Try get and set");
+
             Trapeze trapeze = new Trapeze(1, 1, 1, 1);
 
-            Console.Write("A: ");
+            Console.WriteLine("Trapeze to changes");
+            trapeze.DisplayLengths();
+            Console.WriteLine("Color: " + trapeze.C);
+            Console.WriteLine();
+
+
+            Console.Write("Input base a: ");
             int a = Convert.ToInt32(Console.ReadLine());
             trapeze.A = a;
 
-            Console.Write("B: ");
+            Console.Write("Input base b: ");
             int b = Convert.ToInt32(Console.ReadLine());
             trapeze.B = b;
             
-            Console.Write("H: ");
+            Console.Write("Input height h: ");
             int h = Convert.ToInt32(Console.ReadLine());
             trapeze.H = h;
+            Console.WriteLine();
 
+            Console.WriteLine("Trapeze after changes");
             trapeze.DisplayLengths();
             Console.WriteLine("Color: " + trapeze.C);
             Console.WriteLine("Perimetr: " + trapeze.CalculatePerimeter());
