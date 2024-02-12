@@ -9,7 +9,7 @@ namespace Lab3CSharp
     internal class Person
     {
         protected string Name { get; set; }
-        public int Age { get; set; }
+        internal int Age { get; set; }
 
         public Person() 
         {

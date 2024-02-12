@@ -33,7 +33,7 @@ namespace Lab3CSharp
 
             Trapeze trapeze = new Trapeze(1, 1, 1, 1);
 
-            Console.WriteLine("Trapeze to changes");
+            Console.WriteLine("Trapeze before changes");
             trapeze.DisplayLengths();
             Console.WriteLine("Color: " + trapeze.C);
             Console.WriteLine();
@@ -59,6 +59,8 @@ namespace Lab3CSharp
             Console.WriteLine("Area: " + trapeze.CalculateArea());
             Console.WriteLine("Square: " + trapeze.IsSquare());
             Console.WriteLine();
+
+
 
 
 
